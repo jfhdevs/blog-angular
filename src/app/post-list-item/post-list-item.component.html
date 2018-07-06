@@ -1,0 +1,19 @@
+<div [ngStyle]="{'background-color':postcolor()}">
+  <div  class="row">
+    <div class="col-xs-12 col-sm-6"><h3>{{ post.title}}</h3></div>
+    <div class="col-xs-6 col-sm-3"></div>
+    <div class="col-xs-6 col-sm-3 text-right">{{ post.createdAt | date:'short'}}</div>
+  </div>
+	<div>
+	<p>{{ post.content}}</p>
+  <div  class="row">
+    <div class="col-xs-8 col-sm-4">
+		  <button class="btn btn-success" (click)="onIncLove()">Love it !</button>
+	  	<button class="btn btn-danger" (click)="onDecLove()">Don't love it !</button>
+    </div>
+    <div class="col-xs-10 col-sm-5"></div>
+    <div class="col-xs-6 col-sm-3">
+  		<button class="btn btn-secondary" (click)="onRemovePost(post)">Supprimer post</button>
+    </div>
+	</div>
+</div>
